@@ -1,16 +1,5 @@
 {
   "dependencies": {
     "cypress": "^13.6.6"
-  },
-  "name": "cypress-course",
-  "version": "1.0.0",
-  "main": "cypress.config.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "npx cypress open"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }

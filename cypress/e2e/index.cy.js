@@ -1,16 +1,11 @@
 /// <reference types="cypress" />
+context('Cypher', () => { beforeEach(() => {
+    cy.visit('../../app/index.html'); });
+    it('.type() in cypher and in text, click on button and verif cypher encoded string', () => {
+        cy.get("input[type='number']").type('6')
+        cy.get("input[type='text']").type('Hello World')
+        cy.get(".btn").click()
 
-context("Hello World!", () => {
-  beforeEach(() => {
-    cy.visit("../../ceasar/index.html");
-  });
-
-  it("test de l'encryption", () => {
-    cy.get("#shift").type("6");
-    cy.get("#text").type("hello world!");
-
-    cy.get("#submit").click();
-
-    cy.get("#result-title").should("have.text", "nkrru cuxrj!");
-  });
-});
+        cy.get("#Result").should("have.text" , "Nkrru Cuxrj")
+    })
+})
